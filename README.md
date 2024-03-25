@@ -3,7 +3,7 @@
 
 ## Project Understanding
 
-### Project brief
+### Project Brief
 
 Social Buzz is a fast-growing social media company that has hired Accenture to help it handle the demands of its rapid expansion.
 
@@ -20,7 +20,7 @@ A 3-month initial project has been set up with the following key deliverables:
 
 ![team](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/51adfdda-eaf4-4dcf-bf28-e534392f7e8c)
 
-The diagram above captures the accenture team that has been assigned to this task.
+The diagram above captures the Accenture team that has been assigned to this task.
 
 With Mae Mulligan as the team lead, this team is broken into three parts. 
 
@@ -30,10 +30,10 @@ With Mae Mulligan as the team lead, this team is broken into three parts.
 - Data Team: Members of this section of the team would help provide an audit of Social Buzzâ€™s big data practice and analyze their content categories to identify the top 5 categories with the largest aggregate popularity.  
 
 
-As the data analyst on this team, i have been tasked to carry out the content category analysis.
+As the data analyst on this team, I have been tasked to carry out the content category analysis.
 
 ## Analysis Tools
-Microsoft Excel was used for data cleaning, modelling and subsequent analysis.
+Microsoft Excel was used for data cleaning, modeling, and subsequent analysis.
 
 
 ## Data Cleaning and Modeling
@@ -71,12 +71,12 @@ For each dataset, the following were performed:
       - ReactionType: 'Untitled Row ID Column'
 
 
-Data cleaning operations specific to each dataset are identified next
+Data cleaning operations specific to each dataset are identified next.
 
 #### Content
 
 1. Clean category column
-Capitalization of Category entries were regularized and Unwanted double quotes(â€œ) were eliminated using 
+Capitalization of Category entries was regularized, and Unwanted double quotes(â€œ) were eliminated using 
       = LOWER(SUBSTITUTE(C2,"""",""))
 
 
@@ -90,7 +90,7 @@ Capitalization of Category entries were regularized and Unwanted double quotes(â
 
 #### Reactions
 
-1. Eliminated blank entries from type column using filter
+1. Eliminated blank entries from the 'Type' column using the filter
 
 
 2. The header for the 'Type' column was renamed to 'Reaction Type'
@@ -108,12 +108,12 @@ Capitalization of Category entries were regularized and Unwanted double quotes(â
 ![reaction type](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/96fa8ab3-c26d-4761-8dc8-bbe3af954eea)
 
 
-### Data modelling
+### Data modeling
 A consolidated data model was created to capture the relevant columns for analysis in a table.
 
 This was done using various vlookup functions.
 
-Using the reactions dataset as a base table the following columns were added from their respective tables:
+Using the reactions dataset as a base table, the following columns were added from their respective tables:
 
 - From ReactionType dataset:
 
@@ -127,7 +127,7 @@ Using the reactions dataset as a base table the following columns were added fro
 ![score](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/4eb21f00-84bc-482b-a010-db8be97e5544)
 
 
-- From Content dataset
+- From the Content dataset
 
 Content Type: =VLOOKUP(A2,[Content.xlsx]Content!$A$2:$C$1001,2,FALSE)
 
@@ -143,21 +143,21 @@ Category: =VLOOKUP(A2,[Content.xlsx]Content!$A$2:$C$1001,3,FALSE)
 
 1. Most popular categories
 
-A pivot table was used to calculate the top 5 most popular categories by the cumulative sentiment score
+A pivot table was used to calculate the top 5 most popular categories by the cumulative sentiment score.
 
 ![popularity pivot](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/4d02449d-e3d6-45d1-b204-e1433ecbeab4)
 
-The top 5 categories are animals, science, healthy eating, technology, food.
+The top 5 categories are animals, science, healthy eating, technology, and food.
 
 
-2. Number of unique categories and amount of reactions to most popular category
+2. Number of unique categories and amount of reactions to the most popular category
 
-The following pivot table was used to provide these additional information
+The following pivot table was used to provide this additional information
 
 ![reactions pivot](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/2e52b31f-efcb-4a55-9be7-ecf18fdbcf55)
 
 
-The number of unique categories are 16 and animal, the most popular category had 1897 reactions.
+The number of unique categories is 16, and animal, the most popular category, had 1897 reactions.
 
 
 3. Month with the least number of reaction
@@ -172,13 +172,13 @@ February was the month with the least number of reactions (1914).
 
 4. Most used reactions
 
-The following pivot table was used to provide this additional information
+The following pivot table was used to provide this additional information.
 
 
 ![reaction type pivot](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/63e98f7f-349e-4b5f-a38d-a03a819209c9)
 
 
-The top 5 reaction types are heart, scared, peeking, hate, interested.
+The top 5 reaction types are heart, scared, peeking, hate, and interested.
 
 
 ## Data Visualization
@@ -198,10 +198,10 @@ The top 5 reaction types are heart, scared, peeking, hate, interested.
 ![category visual](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/5bd98804-6ff3-498a-ac67-b6982ad1bcea)
 
 
-The animal content category topped the charts with an aggregate popularity score of 74965. Its difference in popularity with the other categories is the highest in the top 5 content categories. This might indicate that the animal content category might be continue to grow in popularity compared to the other categories. This might lead to a one content type platform which might not be so desirable. To prevent this, the algorithm that controls the content users see should try and maintain an appropriate balance between content categories.
+The animal content category topped the charts with an aggregate popularity score of 74965. Its difference in popularity with the other categories is the highest in the top 5 content categories. This might indicate that the animal content category might continue to grow in popularity compared to the other categories. This might lead to a one-content-type platform, which might not be so desirable. To prevent this, the algorithm that controls the content users see should try to maintain an appropriate balance between content categories.
 
 
-Looking at the other categories in the top 5 list, we see food and healthy eating. This indicates that a major portion of the audience may be interested in food content and even more specifically healthy food content. This healthy consciousness might also be generalized in other areas of their lives as healthy eaing is more popular than food content. This can create an opportunity for a collaboration with healthy eating brands to promote products and content on the platform
+Looking at the other categories in the top 5 list, we see food and healthy eating. This indicates that a major portion of the audience may be interested in food content and, even more specifically, healthy food content. This healthy consciousness might also be generalized in other areas of their lives as healthy eating is more popular than food content. This can create an opportunity for collaboration with healthy eating brands to promote products and content on the platform
 
 
 Science and technology being in the top 5 content categories might also show that the audience is looking for educational content they can learn from. This can indicate the potential benefit of partnering with science and technology content creators to facilitate the production of that type of content.
@@ -218,7 +218,7 @@ For this to be done datetime data associated with when content is first uploaded
 
 ![reaction type visual](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/1f098cca-0ed6-4f0e-bcbc-e344052c90e4)
 
-It should be noted that 2 of the top 4 reactions are scared and hate. It might not be so great spreading content promoting such reactions on the platform
+It should be noted that 2 of the top 4 reactions are scared and hate. It might not be so great to spread content promoting such reactions on the platform.
 
 
 Investigating further by taking a sample of content with these reactions and examining what they are might help understand how best to handle the situation. 
@@ -228,12 +228,12 @@ Investigating further by taking a sample of content with these reactions and exa
 
 The insights gained from this analysis can be extended by examining real-time data generated on the platform for even more timely data driven decision making.
 
-Other areas of the organization can also be analyzed to improve company wide efficiency and performance. 
+Other areas of the organization can also be analyzed to improve company-wide efficiency and performance. 
 
 In accordance with these possibilities, the datasets were analyzed using Power BI. A content analysis dashboard was created to show the potential for real time analytics and further extraction of insights with the right data analysis framework.
 
 
-Data modelling
+Data modeling
 
 ![data model](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/f931b32a-ab17-48e7-854b-a2e276502fba)
 
@@ -247,4 +247,4 @@ Dashboard
 
 ## Conclusion 
 
-Overall, this data analysis project enabled the relevant stakeholders at Social Buzz gain valuable insight into the content and users of their platform. It also displayed the potential of a comprehensive data analytics framework and the benefits the company would gain by working with Accenture.
+Overall, this data analysis project enabled the relevant stakeholders at Social Buzz to gain valuable insight into the content and users of their platform. It also displayed the potential of a comprehensive data analytics framework and the benefits the company would gain by working with Accenture.
