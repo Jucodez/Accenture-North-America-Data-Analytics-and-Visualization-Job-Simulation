@@ -232,14 +232,6 @@ Other areas of the organization can also be analyzed to improve company-wide eff
 
 In accordance with these possibilities, the datasets were analyzed using Power BI. A content analysis dashboard was created to show the potential for real time analytics and further extraction of insights with the right data analysis framework.
 
-
-Data modeling
-
-![data model](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/f931b32a-ab17-48e7-854b-a2e276502fba)
-
-
-A bi directional crossfilter was enabled for both relationships as it ensures each dimension table can be filtered by the other for further analysis.
-
 Dashboard
 
 ![dashboard](https://github.com/Jucodez/Accenture-North-America-Data-Analytics-and-Visualization-Job-Simulation/assets/102746691/47b54c7c-9b93-4687-853f-0bb2b496812b)
